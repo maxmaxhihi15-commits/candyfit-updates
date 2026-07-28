@@ -9,11 +9,11 @@ export const Footer: React.FC = () => {
     <footer className="bg-darkCharcoal text-gray-300 py-12 border-t border-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-10 border-b border-gray-800">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-gray-800">
           
           {/* Brand & Author Info */}
-          <div>
-            <div className="flex items-center gap-2 mb-3">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
               <div className="w-8 h-8 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold text-xs">
                 AF
               </div>
@@ -21,14 +21,14 @@ export const Footer: React.FC = () => {
                 Anna Fitt
               </span>
             </div>
-            <p className="text-xs text-gray-400 font-normal leading-relaxed mb-4">
+            <p className="text-xs text-gray-400 font-normal leading-relaxed mb-4 max-w-xs md:max-w-none text-center md:text-left">
               Приведи себе у форму за 30 днів з тренуваннями біля СТІНИ. Авторська програма схуднення та оздоровлення.
             </p>
             <a
               href={footer.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs text-gray-300 hover:text-white bg-white/5 hover:bg-white/10 px-3.5 py-2 rounded-full border border-white/10 transition-all"
+              className="inline-flex items-center justify-center gap-2 text-xs text-gray-300 hover:text-white bg-white/5 hover:bg-white/10 px-3.5 py-2 rounded-full border border-white/10 transition-all"
             >
               <Instagram className="w-4 h-4 text-brand-400" />
               <span>{footer.instagramHandle}</span>
@@ -36,24 +36,24 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Contacts */}
-          <div>
-            <h4 className="text-xs font-extrabold text-white uppercase tracking-wider mb-4">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <h4 className="text-xs font-extrabold text-white uppercase tracking-wider mb-4 text-center md:text-left">
               КОНТАКТНА ІНФОРМАЦІЯ
             </h4>
-            <ul className="space-y-3 text-xs font-normal">
-              <li>
+            <ul className="space-y-3 text-xs font-normal flex flex-col items-center md:items-start w-full">
+              <li className="w-full text-center md:text-left">
                 <a
                   href={`mailto:${footer.email}`}
-                  className="flex items-center gap-2.5 text-gray-300 hover:text-white transition-colors"
+                  className="inline-flex items-center justify-center md:justify-start gap-2.5 text-gray-300 hover:text-white transition-colors break-all max-w-full"
                 >
                   <Mail className="w-4 h-4 text-brand-400 shrink-0" />
-                  <span>{footer.email}</span>
+                  <span className="break-all">{footer.email}</span>
                 </a>
               </li>
-              <li>
+              <li className="w-full text-center md:text-left">
                 <a
                   href={`tel:${footer.phone}`}
-                  className="flex items-center gap-2.5 text-gray-300 hover:text-white transition-colors"
+                  className="inline-flex items-center justify-center md:justify-start gap-2.5 text-gray-300 hover:text-white transition-colors"
                 >
                   <Phone className="w-4 h-4 text-brand-400 shrink-0" />
                   <span>{footer.phone}</span>
@@ -63,32 +63,32 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Legal Documents & FOP Info */}
-          <div>
-            <h4 className="text-xs font-extrabold text-white uppercase tracking-wider mb-4">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <h4 className="text-xs font-extrabold text-white uppercase tracking-wider mb-4 text-center md:text-left">
               ЮРИДИЧНА ІНФОРМАЦІЯ
             </h4>
-            <div className="text-xs text-gray-400 space-y-1 mb-4">
+            <div className="text-xs text-gray-400 space-y-1 mb-4 text-center md:text-left">
               <p className="font-semibold text-gray-200">{footer.legalName}</p>
               <p>{footer.ipn}</p>
             </div>
-            <ul className="space-y-2 text-xs font-normal">
-              <li>
+            <ul className="space-y-2 text-xs font-normal flex flex-col items-center md:items-start w-full">
+              <li className="w-full text-center md:text-left">
                 <a
                   href={footer.privacyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                  className="inline-flex items-center justify-center md:justify-start gap-2 text-gray-400 hover:text-white transition-colors"
                 >
                   <Shield className="w-3.5 h-3.5 text-brand-400 shrink-0" />
                   <span>Політика конфіденційності</span>
                 </a>
               </li>
-              <li>
+              <li className="w-full text-center md:text-left">
                 <a
                   href={footer.offerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                  className="inline-flex items-center justify-center md:justify-start gap-2 text-gray-400 hover:text-white transition-colors"
                 >
                   <FileText className="w-3.5 h-3.5 text-brand-400 shrink-0" />
                   <span>Публічна оферта</span>
@@ -100,7 +100,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="pt-8 text-center text-xs text-gray-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-8 text-center text-xs text-gray-400 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4">
           <p>© {new Date().getFullYear()} Anna Fitt. Усі права захищено.</p>
           <p className="text-gray-400 text-[11px]">
             Платформа навчання Softbook

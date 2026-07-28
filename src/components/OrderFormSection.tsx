@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { COURSE_DATA } from '../data/courseData';
-import { Send, CheckCircle2, AlertCircle, Lock } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
 
 export const OrderFormSection: React.FC = () => {
   const { orderForm, footer } = COURSE_DATA;
@@ -162,11 +162,6 @@ export const OrderFormSection: React.FC = () => {
                 <span>{orderForm.buttonLabel}</span>
                 <Send className="w-4 h-4" />
               </button>
-
-              <div className="flex items-center justify-center gap-1.5 text-[11px] text-softGray font-medium pt-2">
-                <Lock className="w-3.5 h-3.5 text-emerald-500" />
-                <span>{orderForm.note}</span>
-              </div>
             </form>
           )}
 
