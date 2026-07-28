@@ -1,6 +1,5 @@
 import React from 'react';
-import { Instagram, Flame } from 'lucide-react';
-import { COURSE_DATA } from '../data/courseData';
+import { Flame } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   return (
@@ -21,27 +20,14 @@ export const Navbar: React.FC = () => {
           </div>
         </a>
 
-        {/* Action Buttons & Social link */}
-        <div className="flex items-center gap-3">
-          <a
-            href={COURSE_DATA.hero.instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-xs font-semibold text-darkCharcoal hover:text-brand-500 bg-white/80 px-3 py-1.5 rounded-full border border-lightBorder shadow-sm transition-all"
-            aria-label="Instagram @annafit__"
-          >
-            <Instagram className="w-4 h-4 text-brand-500" />
-            <span className="hidden xs:inline">{COURSE_DATA.hero.instagramHandle}</span>
-          </a>
-
-          <a
-            href="#pricing"
-            className="flex items-center gap-1.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold px-4 py-2 rounded-full shadow-cta transition-all hover:scale-105 active:scale-95"
-          >
-            <Flame className="w-3.5 h-3.5 fill-white" />
-            <span>ПРИДБАТИ</span>
-          </a>
-        </div>
+        {/* Action Button CTA */}
+        <a
+          href="#pricing"
+          className="flex items-center gap-1.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold px-4 py-2 rounded-full shadow-cta transition-all hover:scale-105 active:scale-95"
+        >
+          <Flame className="w-3.5 h-3.5 fill-white" />
+          <span>ПРИДБАТИ</span>
+        </a>
       </div>
     </header>
   );

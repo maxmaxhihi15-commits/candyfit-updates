@@ -15,7 +15,7 @@ export const AudiencePainPoints: React.FC = () => {
             <HeartHandshake className="w-3.5 h-3.5" />
             <span>Для кого цей курс</span>
           </div>
-          <h2 className="text-xl sm:text-3xl font-extrabold text-darkCharcoal tracking-tight leading-snug">
+          <h2 className="text-xl sm:text-3xl font-extrabold text-darkCharcoal tracking-tight leading-snug [text-wrap:balance]">
             {painPoints.title}
           </h2>
         </div>
@@ -27,7 +27,7 @@ export const AudiencePainPoints: React.FC = () => {
               key={item.id}
               className="group relative bg-warmBg/70 hover:bg-white rounded-2xl p-5 border border-lightBorder hover:border-brand-200 shadow-sm hover:shadow-card transition-all duration-300 flex flex-col justify-between"
             >
-              {/* Optional image preview if available */}
+              {/* Image preview */}
               <div className="w-full h-40 rounded-xl overflow-hidden mb-4 bg-pinkAccent/30 relative">
                 <img
                   src={item.image}
@@ -40,7 +40,8 @@ export const AudiencePainPoints: React.FC = () => {
                 </div>
               </div>
 
-              <p className="text-xs sm:text-sm font-semibold text-darkCharcoal leading-relaxed">
+              {/* Card Description Text - Center-aligned, +1px font size (13px/15px), balanced text wrapping & adjusted padding */}
+              <p className="text-[13px] sm:text-[15px] font-semibold text-darkCharcoal leading-relaxed text-center px-3 sm:px-4 [text-wrap:balance]">
                 {item.text}
               </p>
             </div>

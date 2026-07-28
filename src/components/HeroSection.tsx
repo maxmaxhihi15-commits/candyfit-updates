@@ -22,29 +22,32 @@ export const HeroSection: React.FC = () => {
             </span>
           </div>
 
-          {/* H1 Main Course Title */}
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-darkCharcoal tracking-tight leading-[1.15] max-w-3xl mb-4">
+          {/* Prominent Primary Heading */}
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-darkCharcoal tracking-tight leading-[1.1] max-w-4xl mb-5 [text-wrap:balance]">
             {hero.title}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-sm sm:text-lg text-softGray font-normal max-w-2xl leading-relaxed mb-6">
+          <p className="text-sm sm:text-base md:text-lg text-softGray font-medium max-w-2xl leading-relaxed mb-8 [text-wrap:balance]">
             {hero.subtitle}
           </p>
 
-          {/* Highlight feature card */}
-          <div className="w-full max-w-xl bg-white/90 backdrop-blur-sm border border-lightBorder rounded-2xl p-4 sm:p-5 shadow-soft mb-8">
-            <div className="flex items-start gap-3 text-left">
-              <div className="p-2 rounded-xl bg-brand-100/60 text-brand-600 shrink-0 mt-0.5">
-                <Sparkles className="w-5 h-5" />
-              </div>
-              <p className="text-xs sm:text-sm font-semibold text-darkCharcoal leading-snug">
-                {hero.highlightText}
+          {/* Swapped Card 1: Purchase Bonus Card (Card B - Shown BEFORE main course card) */}
+          <div className="w-full max-w-md bg-gradient-to-r from-pinkAccent to-white border border-brand-200/80 rounded-2xl p-4 sm:p-5 text-left flex items-start gap-3.5 shadow-sm mb-8">
+            <div className="p-2.5 rounded-xl bg-brand-500 text-white shrink-0 shadow-sm mt-0.5">
+              <Gift className="w-5 h-5" />
+            </div>
+            <div>
+              <h4 className="text-xs sm:text-sm font-bold text-darkCharcoal mb-1">
+                {hero.bonusTitle}
+              </h4>
+              <p className="text-xs text-softGray leading-relaxed font-normal">
+                {hero.bonusText}
               </p>
             </div>
           </div>
 
-          {/* Creator Image & Main Offer Box Container */}
+          {/* Main Course Creator Image & Purchase Card */}
           <div className="w-full max-w-md bg-white rounded-3xl p-5 sm:p-7 shadow-card border border-lightBorder/80 mb-8 relative">
             
             {/* Discount Ribbon */}
@@ -62,7 +65,7 @@ export const HeroSection: React.FC = () => {
                 loading="eager"
               />
               <div className="absolute bottom-3 left-3 bg-darkCharcoal/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5">
-                <span>@annafit__</span>
+                <span>{hero.instagramHandle}</span>
               </div>
             </div>
 
@@ -93,28 +96,22 @@ export const HeroSection: React.FC = () => {
               <span>{hero.ctaText}</span>
             </a>
 
-            {/* Trust indicators */}
-            <div className="mt-4 flex items-center justify-center gap-4 text-[11px] font-medium text-softGray">
-              <span className="flex items-center gap-1">
-                <CheckCircle className="w-3.5 h-3.5 text-emerald-500" /> Доступ 60 днів
-              </span>
-              <span className="flex items-center gap-1">
-                <CheckCircle className="w-3.5 h-3.5 text-emerald-500" /> Стіна + килимок
+            {/* Single Centered Feature: "Доступ 60 днів" */}
+            <div className="mt-4 flex items-center justify-center text-xs font-medium text-softGray">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle className="w-4 h-4 text-emerald-500" /> Доступ 60 днів
               </span>
             </div>
           </div>
 
-          {/* Bonus Banner Box */}
-          <div className="w-full max-w-md bg-gradient-to-r from-pinkAccent to-white border border-brand-200/80 rounded-2xl p-4 sm:p-5 text-left flex items-start gap-3.5 shadow-sm">
-            <div className="p-2.5 rounded-xl bg-brand-500 text-white shrink-0 shadow-sm mt-0.5">
-              <Gift className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="text-xs sm:text-sm font-bold text-darkCharcoal mb-1">
-                {hero.bonusTitle}
-              </h4>
-              <p className="text-xs text-softGray leading-relaxed font-normal">
-                {hero.bonusText}
+          {/* Swapped Card 2: Course Benefit Statement Card (Card A - Shown AFTER main course card) */}
+          <div className="w-full max-w-xl bg-white/90 backdrop-blur-sm border border-lightBorder rounded-2xl p-4 sm:p-5 shadow-soft">
+            <div className="flex items-start gap-3 text-left">
+              <div className="p-2 rounded-xl bg-brand-100/60 text-brand-600 shrink-0 mt-0.5">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <p className="text-xs sm:text-sm font-semibold text-darkCharcoal leading-snug">
+                {hero.highlightText}
               </p>
             </div>
           </div>

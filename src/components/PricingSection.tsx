@@ -33,8 +33,8 @@ export const PricingSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch mb-12">
+        {/* Pricing Cards Grid - Vertical spacing between stacked cards increased by ~15px (gap-y-[39px] / 39px gap) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-[39px] md:gap-8 items-stretch mb-12">
           {pricing.packages.map((pkg) => (
             <PricingCard key={pkg.id} pkg={pkg} />
           ))}
