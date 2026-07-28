@@ -1,0 +1,12 @@
+node_modules
+dist
+.DS_Store
+*.local
+extracted_summary.json
+extracted_details.json
+extracted_lines.txt
+extracted_assets.json
+downloaded_map.json
+parse.js
+parse.py
+download_assets.py
