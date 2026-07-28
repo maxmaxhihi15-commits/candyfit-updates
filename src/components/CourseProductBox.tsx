@@ -39,26 +39,23 @@ export const CourseProductBox: React.FC<CourseProductBoxProps> = ({ image, title
                 AF
               </span>
               <div className="min-w-0">
-                <p className="truncate text-[11px] font-black leading-none text-darkCharcoal">
-                  AnnaFitt
-                </p>
+                <p className="truncate text-[11px] font-black leading-none text-darkCharcoal">AnnaFitt</p>
                 <p className="mt-1 text-[8px] font-bold uppercase tracking-[0.16em] text-brand-600">
                   30-денний курс
                 </p>
               </div>
             </div>
 
-            <h3 className="relative z-20 max-w-[172px] text-left text-[17px] font-black leading-[1.02] tracking-[-0.035em] text-darkCharcoal [text-wrap:balance] sm:max-w-[190px] sm:text-[19px]">
+            <h3 className="relative z-10 max-w-[172px] text-left text-[17px] font-black leading-[1.02] tracking-[-0.035em] text-darkCharcoal [text-wrap:balance] sm:max-w-[190px] sm:text-[19px]">
               {title}
             </h3>
 
-            {/* Lifted artwork: the arm now subtly overlaps beneath the title area. */}
-            <div className="relative z-10 -mx-4 mb-[-10px] mt-auto h-[132px] -translate-y-[10px] overflow-hidden sm:-mx-5 sm:mb-[-12px] sm:h-[148px] sm:-translate-y-[12px]">
+            <div className="relative z-0 -mx-4 mb-[-10px] mt-auto h-[128px] -translate-y-[10px] overflow-hidden sm:-mx-5 sm:mb-[-12px] sm:h-[144px] sm:-translate-y-[12px]">
               <img
                 src={image}
                 alt=""
                 aria-hidden="true"
-                className="h-full w-full scale-[1.04] object-cover object-[center_8%]"
+                className="h-full w-full object-cover object-top"
                 loading="eager"
               />
               <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-brand-50/90 via-brand-50/45 to-transparent" />
@@ -70,8 +67,8 @@ export const CourseProductBox: React.FC<CourseProductBoxProps> = ({ image, title
           </div>
         </div>
 
-        {/* Side spine — transform order keeps the front edge physically attached. */}
-        <div className="absolute inset-y-[10px] left-[197px] w-[42px] origin-left overflow-hidden rounded-r-[14px] border-y border-r border-brand-700/25 bg-gradient-to-b from-brand-500 via-brand-600 to-brand-700 shadow-[8px_10px_20px_rgba(65,26,39,0.18)] sm:left-[219px] sm:w-[46px] [transform:translateZ(21px)_rotateY(90deg)]">
+        {/* Side spine */}
+        <div className="absolute inset-y-[10px] left-[197px] w-[42px] origin-left overflow-hidden rounded-r-[14px] border-y border-r border-brand-700/25 bg-gradient-to-b from-brand-500 via-brand-600 to-brand-700 shadow-[10px_12px_25px_rgba(65,26,39,0.2)] sm:left-[219px] sm:w-[46px] [backface-visibility:hidden] [transform:translateZ(21px)_rotateY(90deg)]">
           <div className="flex h-full items-center justify-center">
             <span className="[writing-mode:vertical-rl] rotate-180 text-[9px] font-black uppercase tracking-[0.28em] text-white/95">
               AnnaFitt • 30 днів
@@ -79,13 +76,6 @@ export const CourseProductBox: React.FC<CourseProductBoxProps> = ({ image, title
           </div>
         </div>
 
-        {/* Top face */}
-        <div className="absolute left-[9px] top-0 h-[42px] w-[180px] origin-top rounded-t-[18px] border border-brand-200/70 bg-gradient-to-r from-white to-brand-100 sm:w-[202px] [transform:rotateX(90deg)_translateZ(21px)]">
-          <div className="flex h-full items-center justify-between px-4 text-[8px] font-black uppercase tracking-[0.18em] text-brand-600">
-            <span>AnnaFitt</span>
-            <span>AF</span>
-          </div>
-        </div>
       </div>
     </div>
   );
