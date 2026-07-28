@@ -55,12 +55,13 @@ export const CourseProductBox: React.FC<CourseProductBoxProps> = ({ image, title
                 src={image}
                 alt=""
                 aria-hidden="true"
-                className="h-full w-full object-cover object-top"
+                className="w-full object-cover object-top"
+                style={{ height: 'calc(100% + 8px)', transform: 'translateY(-4px)' }}
                 loading="eager"
               />
               <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-brand-50/90 via-brand-50/45 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-darkCharcoal/70 to-transparent" />
-              <span className="absolute bottom-3 left-4 rounded-full border border-white/40 bg-white/90 px-2.5 py-1 text-[8px] font-extrabold uppercase tracking-wide text-brand-600 shadow-sm backdrop-blur-sm">
+              <span className="absolute bottom-3 right-4 rounded-full border border-white/40 bg-white/90 px-2.5 py-1 text-[8px] font-extrabold uppercase tracking-wide text-brand-600 shadow-sm backdrop-blur-sm sm:right-5">
                 Доступ 60 днів
               </span>
             </div>
